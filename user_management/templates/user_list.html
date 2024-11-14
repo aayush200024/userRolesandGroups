@@ -1,0 +1,8 @@
+<h1>User List</h1>
+<ul>
+    {% for user in users %}
+        <li>{{ user.username }} - {{ user.get_role_display }}
+            <a href="{% url 'manage_roles' user.id %}">Manage Role</a>
+        </li>
+    {% endfor %}
+</ul>
